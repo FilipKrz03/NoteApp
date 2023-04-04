@@ -1,0 +1,52 @@
+.closeModal{
+    position: fixed;
+    top: 50%;
+    left:50%;
+    transform: translate(-50% , -50%) scale(0);
+    transition: 300ms ease-in-out;
+    width: 750px;
+    height: 300px;
+    z-index: 10;
+    background-color: $background-secondary;
+    padding: 3rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border: 2px solid $color;
+    border-radius: 20px;
+
+    .buttonArea{
+        display: flex;
+        justify-content: space-between;
+
+        button{
+            width: 150px;
+            height: 45px;
+            border:none;
+            border-radius: 50px;
+            cursor: pointer;
+            color: $background-secondary;
+        }
+        .confrim{
+            background-color: green;
+        }
+
+        .reject{
+            background-color: red;
+        }
+    }
+
+    img{
+        position: absolute;
+        top: 5%;
+        right: 3%;
+        width: 30px;
+        cursor: pointer;
+    }
+
+    &.active{
+        transform: translate(-50% , -50%) scale(1);
+    }
+
+}

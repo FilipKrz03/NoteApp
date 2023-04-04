@@ -1,0 +1,27 @@
+header{
+    width: 100vw;
+    background-color: $background-secondary;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    gap: 10px;
+
+    input{
+        width: 80vw;
+        height: 30px;
+        border: 2px solid black;
+        border-radius: 20px;
+        padding: 1rem;
+    }
+
+    button{
+        width: 200px;
+        height: 40px;
+        background: black;
+        color: white;
+        font-size: $font-l;
+        padding: 0.3rem;
+        border-radius: 30px;
+    }
+}
