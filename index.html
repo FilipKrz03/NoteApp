@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/css/main.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+    <script src="/src/script/app.js" defer type="module"></script>
+    <title>Notes</title>
+  </head>
+  <body>
+    <template id="noteTemplate">
+      <div class="note userNote">
+        <h2>Pojsc do sklepu</h2>
+        <p>Musze pojsc do sklepu czym predzej</p>
+        <footer>
+          <span class="data">04 April 2020</span>
+          <img src="/src/img/trash3.svg" alt="trash" />
+        </footer>
+      </div>
+    </template>
+
+    <header>
+      <input type="text" id="listName" placeholder="Enter list name" />
+      <button id="listAddBtn">Add list</button>
+    </header>
+
+    <section>
+      <div class="listContainer"></div>
+    </section>
+
+    <main>
+      <div class="addNote" id="mainNote">
+        <img
+          src="/src/img/plus-circle-dotted (2).svg"
+          alt="circle"
+          class="addNoteBtn"
+        />
+        <p>Add new note</p>
+      </div>
+
+      <div class="userNotes"></div>
+    </main>
+
+    <div class="modal">
+      <form>
+        <input type="text" id="title" placeholder="Enter Title" />
+        <textarea
+          name=""
+          id="body"
+          cols="30"
+          rows="10"
+          placeholder="Enter Body"
+        ></textarea>
+        <input type="submit" id="submit" />
+
+        <img src="/src/img/x-lg.svg" alt="x" id="backModal" />
+      </form>
+    </div>
+
+    <div class="closeModal">
+      <h2>Are you sure that you want to delate your note ?</h2>
+      <div class="buttonArea">
+        <button class="confrim">Yes</button>
+        <button class="reject">No</button>
+      </div>
+
+      <img src="/src/img/x-lg.svg" alt="x" />
+    </div>
+
+    <div id="overlay"></div>
+  </body>
+</html>
