@@ -1,5 +1,5 @@
 # NoteApp
-NoteApp:
--OOP
--HTTP Request
--Js Modules
+I made this for learn / train:
+
+- OOP,
+- Modules,
