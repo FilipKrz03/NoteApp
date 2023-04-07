@@ -10,6 +10,8 @@ Aplication Made With :
 
 
 Funcionalities:
+
+
 -Add / delate Notes ,
 -Add / delate Note Lists ,
 -Switch between Note Lists 
