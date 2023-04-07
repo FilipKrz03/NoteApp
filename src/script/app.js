@@ -5,3 +5,4 @@ Tool.addAddListListener();
 Tool.noteTool();
 Modals.noteModalListiner();
 Modals.closeDelateModalListener();
+Tool.defaultList();

@@ -8,9 +8,11 @@ export class List{
         this.id = id; 
     }
 
-    createNote(title, body , id)
+  static  createNote(title, body , id , index , userData)
     {
-        const note = new Note(title , body , id);
-        this.notes.push(note);
+        const note = new Note(title , body , id , userData);
+        const storageList = JSON.parse(localStorage.getItem('lists'));
+        storageList[index].notes.push(note)
+        localStorage.setItem('lists' , JSON.stringify(storageList));
     }
 }

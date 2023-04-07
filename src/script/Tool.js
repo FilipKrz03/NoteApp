@@ -4,8 +4,8 @@ import { Modals } from "./Modals.js";
 export class Tool{
 
     static listManager = new ListManager();
-   static  addAddListListener(){
 
+   static  addAddListListener(){
         const addBtn = document.getElementById('listAddBtn');
         addBtn.addEventListener('click' , ()=> {
             let listName = document.getElementById('listName');
@@ -18,8 +18,21 @@ export class Tool{
         })
     }
 
-  static noteTool(){
+  static async noteTool(){
+        
         const form = document.querySelector('form');
+        let userData;
+
+        try{
+        const data = await axios.get("http://worldtimeapi.org/api/timezone/Europe/Warsaw")
+         userData = await data.data.datetime;
+        userData  = await userData.slice(0 , 10);
+        }
+        catch (err){
+            console.log(err);
+            userData = '2023-04-02'
+        }
+
         form.addEventListener('submit' , (event) => {
             event.preventDefault();
             const title = form.querySelector('#title');
@@ -36,8 +49,9 @@ export class Tool{
             const activeListId = document.querySelector('.active').id;
             const modal = document.querySelector('.modal').classList.remove('active');
             const overlay = document.getElementById('overlay').classList.remove('active');
-            /* List.addNote(title.value , body.value , noteId , activeListId); */
-            this.listManager.addNote(title.value , body.value , noteId , activeListId);
+            this.listManager.addNote(title.value , body.value , noteId , activeListId , true , userData);
+            body.value = '';
+            title.value = '';
         })
     } 
 
@@ -53,6 +67,14 @@ export class Tool{
             delateDecision.removeEventListener('click' , handler);
         }
         delateDecision.addEventListener('click' , handler );
+        }
+
+
+        static defaultList(){
+            const defList = document.getElementById(1);
+            defList.querySelector('#listTrash').addEventListener('click' , () => {
+                alert('Cannot remove default list');
+            })
         }
 }
 
