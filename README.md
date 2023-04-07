@@ -9,9 +9,10 @@ Aplication Made With :
 - Responsive Design.
 
 
-Funcionalities:
-
+  Funcionalities:
 
 -Add / delate Notes ,
+
 -Add / delate Note Lists ,
+
 -Switch between Note Lists 
