@@ -1,4 +1,13 @@
 # NoteApp
+ Aplication Funcionalities:
+
+-Add / delate Notes ,
+
+-Add / delate Note Lists ,
+
+-Switch between Note Lists.
+
+
 Aplication Made With :
 
 - OOP,
@@ -9,10 +18,7 @@ Aplication Made With :
 - Responsive Design.
 
 
-  Funcionalities:
 
--Add / delate Notes ,
 
--Add / delate Note Lists ,
 
--Switch between Note Lists 
+
