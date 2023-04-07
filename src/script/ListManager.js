@@ -2,9 +2,7 @@ import { List } from "./List.js";
 import { Tool } from "./Tool.js";
 
 export class ListManager{
-
-
-
+    
     constructor(){
         this.createDefaultList();
     }
